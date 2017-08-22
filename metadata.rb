@@ -22,7 +22,7 @@ maintainer_email 'dominik.richter@googlemail.com'
 license          'Apache-2.0'
 description      'Installs and configures operating system hardening'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '2.1.1'
+version          '2.1.2'
 
 chef_version '>= 12.5' if respond_to?(:chef_version)
 
@@ -34,7 +34,7 @@ supports 'oracle', '>= 6.4'
 
 # temporary version pinning of sysctl
 # https://github.com/dev-sec/chef-os-hardening/issues/166#issuecomment-322433264
-depends 'sysctl', '<= 0.9.0'
+depends 'sysctl', '<= 0.10.1'
 depends 'compat_resource', '>= 12.16.3'
 
 recipe 'os-hardening::default', 'harden the operating system (all recipes)'
